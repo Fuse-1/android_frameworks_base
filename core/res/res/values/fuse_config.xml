@@ -22,4 +22,10 @@
     <!-- Enable face auth only when swiping security view -->
     <bool name="config_faceAuthOnlyOnSecurityView">false</bool>
 
+    <!-- Power Menu Reboot -->
+    <string-array translatable="false" name="config_rebootActionsList">
+        <item>restart</item>
+        <item>reboot_recovery</item>
+        <item>reboot_bootloader</item>
+    </string-array>
 </resources>
