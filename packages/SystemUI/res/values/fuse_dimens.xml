@@ -14,4 +14,8 @@
     <!-- Bluetooth dialog -->
     <dimen name="bluetooth_dialog_active_device_bottom_margin">4dp</dimen>
 
+    <!-- Bolt Battery Icon -->
+    <dimen name="status_bar_battery_bolt_icon_height">13.5dp</dimen>
+    <dimen name="status_bar_battery_bolt_icon_width">9.7dp</dimen>
+
 </resources>
