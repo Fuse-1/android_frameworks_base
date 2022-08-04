@@ -18,4 +18,7 @@
     <dimen name="status_bar_battery_bolt_icon_height">13.5dp</dimen>
     <dimen name="status_bar_battery_bolt_icon_width">9.7dp</dimen>
 
+    <!-- QS Customizer -->
+    <dimen name="fuse_qs_customize_side_paddings">16dp</dimen>
+
 </resources>
