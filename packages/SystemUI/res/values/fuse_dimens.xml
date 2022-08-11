@@ -21,4 +21,8 @@
     <!-- QS Customizer -->
     <dimen name="fuse_qs_customize_side_paddings">16dp</dimen>
 
+    <!-- QS Drag Handle -->
+    <dimen name="kscope_qs_drag_handle_width">56dp</dimen>
+    <dimen name="kscope_qs_drag_handle_height">4dp</dimen>
+
 </resources>

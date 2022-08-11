@@ -27,6 +27,7 @@ import android.view.View.OnLayoutChangeListener;
 import androidx.annotation.Nullable;
 
 import com.android.systemui.animation.Interpolators;
+import com.android.systemui.R;
 import com.android.systemui.dagger.qualifiers.Main;
 import com.android.systemui.plugins.qs.QS;
 import com.android.systemui.plugins.qs.QSTile;
@@ -91,6 +92,7 @@ public class QSAnimator implements QSHost.Callback, PagedTileLayout.PageListener
     private final QuickQSPanelController mQuickQSPanelController;
     private final QuickStatusBarHeader mQuickStatusBarHeader;
     private final QS mQs;
+    private View mQuickQSDragHandleLineView;
 
     @Nullable
     private PagedTileLayout mPagedLayout;
@@ -168,6 +170,7 @@ public class QSAnimator implements QSHost.Callback, PagedTileLayout.PageListener
         mTunerService = tunerService;
         mQSExpansionPathInterpolator = qsExpansionPathInterpolator;
         mHost.addCallback(this);
+        mQuickQSDragHandleLineView = mQuickStatusBarHeader.findViewById(R.id.qs_drag_handle);
         mQsPanelController.addOnAttachStateChangeListener(this);
         qs.getView().addOnLayoutChangeListener(this);
         if (mQsPanelController.isAttachedToWindow()) {
@@ -590,6 +593,7 @@ public class QSAnimator implements QSHost.Callback, PagedTileLayout.PageListener
                     // portrait orientation before
                     .addFloat(qsBrightness, "sliderScaleY", 0.3f, 1)
                     .addFloat(qqsBrightness, "translationY", 0, translationY)
+                    .addFloat(mQuickQSDragHandleLineView, "translationY", 0, translationY)
                     .setInterpolator(mQSExpansionPathInterpolator.getYInterpolator())
                     .setInterpolator(mQuickQSPanelController.mMediaHost.getVisible() ?
                             Interpolators.ALPHA_OUT : Interpolators.SLOWDOWN)

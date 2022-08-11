@@ -86,6 +86,7 @@ public class QuickStatusBarHeader extends FrameLayout {
     private BatteryMeterView mBatteryRemainingIcon;
     private StatusIconContainer mIconContainer;
     private View mPrivacyChip;
+    private View mQSDragHandle;
 
     @Nullable
     private TintedIconManager mTintedIconManager;
@@ -150,6 +151,8 @@ public class QuickStatusBarHeader extends FrameLayout {
         mDatePrivacySeparator = findViewById(R.id.space);
         // Tint for the battery icons are handled in setupHost()
         mBatteryRemainingIcon = findViewById(R.id.batteryRemainingIcon);
+
+        mQSDragHandle = findViewById(R.id.qs_drag_handle);
 
         updateResources();
         Configuration config = mContext.getResources().getConfiguration();
@@ -343,6 +346,8 @@ public class QuickStatusBarHeader extends FrameLayout {
                 .addFloat(mDateView, "alpha", 0, 0, 1)
                 .addFloat(mClockDateView, "alpha", 1, 0, 0)
                 .addFloat(mQSCarriers, "alpha", 0, 1)
+                .addFloat(mQSDragHandle, "alpha", 1, 0)
+
                 // Use statusbar paddings when collapsed,
                 // align with QS when expanded, and animate translation
                 .addFloat(mClockContainer, "translationX",
