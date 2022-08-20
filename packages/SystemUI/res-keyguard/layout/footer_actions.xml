@@ -43,6 +43,7 @@
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_marginEnd="@dimen/qs_footer_action_inset_negative"
+        android:gravity="center_vertical"
         >
 
         <com.android.systemui.statusbar.phone.MultiUserSwitch
