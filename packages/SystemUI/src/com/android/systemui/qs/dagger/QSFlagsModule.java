@@ -49,7 +49,6 @@ public interface QSFlagsModule {
     @SysUISingleton
     @Named(PM_LITE_ENABLED)
     static boolean isPMLiteEnabled(FeatureFlags featureFlags, GlobalSettings globalSettings) {
-        return featureFlags.isEnabled(Flags.POWER_MENU_LITE)
-                && globalSettings.getInt(PM_LITE_SETTING, PM_LITE_SETTING_DEFAULT) != 0;
+        return false;
     }
 }
