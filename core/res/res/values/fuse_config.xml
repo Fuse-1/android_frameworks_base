@@ -28,4 +28,7 @@
         <item>reboot_recovery</item>
         <item>reboot_bootloader</item>
     </string-array>
+
+    <!-- Boost Framework -->
+    <bool name="config_supportsBoostFramework">false</bool>
 </resources>
