@@ -2222,12 +2222,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mNoAnimationOnNextBarModeChange = false;
     }
 
-    // Called by NavigationBarFragment
-    @Override
-    public void setQsScrimEnabled(boolean scrimEnabled) {
-        mNotificationPanelViewController.setQsScrimEnabled(scrimEnabled);
-    }
-
     /** Temporarily hides Bubbles if the status bar is hidden. */
     @Override
     public void updateBubblesVisibility() {
